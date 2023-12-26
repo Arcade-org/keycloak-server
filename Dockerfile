@@ -24,5 +24,7 @@ COPY --from=builder /opt/keycloak/ /opt/keycloak/
 ENV KC_HOSTNAME=localhost
 ENV KEYCLOAK_ADMIN=<KCUSER>
 ENV KEYCLOAK_ADMIN_PASSWORD=<KCPASSWORD>
+ENV KEYCLOAK_HTTPS_CERTIFICATE=keycloak-server-ugrg.onrender
+ENV KEYCLOAK_HTTPS_KEY=keycloak-server-ugrg.onrender
 
 ENTRYPOINT ["/opt/keycloak/bin/kc.sh", "--verbose"]
